@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Resumate",
+    "version": "1.0.0",
+    "description": "Copy and paste personal information quickly for online job applications.",
+    "icons": {
+      "48": "resumate-48.png",
+      "128": "resumate-128.png"
+    },
+    "action": {
+        "default_popup": "index.html"
+    }
+}
