@@ -32,6 +32,7 @@ Order for CSS Documentation
   /* Custom Colours */
   --rich-black: #0D1B2A;
   --oxford-blue: #1B263B;
+  --prussian-blue: #25334A;
   --yinmn-blue: #415A77;
   --silver-late-blue: #778DA9;
   --platinum: #E0E1DD;
@@ -45,25 +46,20 @@ Order for CSS Documentation
   width: 100%;
   height: 100%;
   margin: 0;
-  text-align: center;
 }
 
 body {
   display: flex;
-  min-width: 320px;
-  min-height: 400px;
+  width: 320px;
+  height: 400px;
   padding: 0;
   margin: 0;
 }
 
 header {
   display: flex;
-  margin: 1rem 0 0 1rem;
+  margin: 1rem;
   align-items: center;
-}
-
-main {
-  padding: 0 1rem;
 }
 
 header img {
@@ -75,10 +71,16 @@ header h1 {
   margin: 0 0.5rem;
 }
 
+main {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+}
+
 nav {
   display: flex;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: auto;
   padding: 0.2rem 0;
@@ -89,6 +91,7 @@ nav {
 nav figure {
   margin: 0;
   font-size: 0.5rem;
+  text-align: center;
 }
 
 nav img {
@@ -98,16 +101,28 @@ nav img {
   border-radius: 0.5rem;
 }
 
+input[name=tab] {
+  position: fixed;
+  opacity: 0;
+  border-radius: 0.5rem;
+}
+
 /* Light Mode */
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--oxford-blue);
     background-color: var(--seasalt);
   }
+
   nav {
     border-color: var(--yinmn-blue);
   }
+
   nav img:hover {
+    background-color: var(--platinum);
+  }
+
+  input[name=tab]:checked + label picture img {
     background-color: var(--platinum);
   }
 }
@@ -116,12 +131,18 @@ nav img {
 @media (prefers-color-scheme: dark) {
   :root {
     color: var(--seasalt);
-    background-color: var(--oxford-blue);
+    background-color: var(--prussian-blue);
   }
+
   nav {
     border-color: var(--silver-late-blue);
   }
+
   nav img:hover {
+    background-color: var(--yinmn-blue);
+  }
+
+  input[name=tab]:checked + label picture img {
     background-color: var(--yinmn-blue);
   }
 }
