@@ -1,0 +1,54 @@
+.link {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border-style: solid;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  align-items: center;
+  cursor: pointer;
+}
+
+.link a {
+  margin: 0 0.5rem 0 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link p {
+  margin: 0;
+  font-size: 0.6rem;
+  font-weight: normal;
+  color: inherit;
+  overflow: hidden;
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  .link {
+    border-color: var(--platinum);
+    background-color: var(--white-smoke);
+    color: var(--oxford-blue);
+  }
+
+  .link:active {
+    background-color: var(--platinum);
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .link {
+    border-color: var(--oxford-blue);
+    background-color: var(--yinmn-blue);
+    color: var(--seasalt);
+  }
+
+  .link:active {
+    background-color: var(--prussian-blue);
+  }
+}
