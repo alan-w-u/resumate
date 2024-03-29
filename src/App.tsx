@@ -1,8 +1,10 @@
-// import { useState } from 'react'
-// import Links from './assets/Links'
+import { useState } from 'react'
+import Links from './assets/Links'
 import './App.css'
 
 function App() {
+  const [tab, setTab] = useState('links');
+
   return (
     <>
       <header>
@@ -10,10 +12,10 @@ function App() {
         <h1>Resumate</h1>
       </header>
       <main>
-        {/* <Links /> */}
+        {tab === 'links' && <Links />}
       </main>
       <nav>
-        <input type="radio" name="tab" id="links" />
+        <input type="radio" name="tab" id="links" onChange={() => setTab('links')} defaultChecked />
         <label htmlFor="links">
           <figure>
             <picture>
@@ -23,8 +25,8 @@ function App() {
             <figcaption>Links</figcaption>
           </figure>
         </label>
-        <input type="radio" name="tab" id="experience" />
 
+        <input type="radio" name="tab" id="experience" onChange={() => setTab('experience')} />
         <label htmlFor="experience">
           <figure>
             <picture>
@@ -35,7 +37,7 @@ function App() {
           </figure>
         </label>
 
-        <input type="radio" name="tab" id="resume" />
+        <input type="radio" name="tab" id="resume" onChange={() => setTab('resume')} />
         <label htmlFor="resume">
           <figure>
             <picture>
@@ -46,7 +48,7 @@ function App() {
           </figure>
         </label>
 
-        <input type="radio" name="tab" id="profile" />
+        <input type="radio" name="tab" id="profile" onChange={() => setTab('profile')} />
         <label htmlFor="profile">
           <figure>
             <picture>
