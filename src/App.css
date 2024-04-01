@@ -48,6 +48,11 @@ Order for CSS Documentation
   --hover: light-dark(var(--white-smoke), var(--yinmn-blue));
   --active: light-dark(var(--white-smoke), var(--yinmn-blue));
 
+  --asset-border: light-dark(var(--platinum), var(--oxford-blue));
+  --asset-background: light-dark(var(--white-smoke), var(--yinmn-blue));
+  --asset-hover: light-dark(var(--cararra), var(--indigo-dye));
+  --asset-active: light-dark(var(--platinum), var(--oxford-blue));
+
   color: var(--text);
   background-color: var(--background);
 }
