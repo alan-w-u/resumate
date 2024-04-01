@@ -37,14 +37,14 @@ function App() {
           </figure>
         </label>
 
-        <input type="radio" name="tab" id="resume" onChange={() => setTab('resume')} />
-        <label htmlFor="resume">
+        <input type="radio" name="tab" id="documents" onChange={() => setTab('documents')} />
+        <label htmlFor="documents">
           <figure>
             <picture>
-              <source srcSet="resume-dark.png" media="(prefers-color-scheme: dark)" />
-              <img src="resume-light.png" alt="resume" />
+              <source srcSet="documents-dark.png" media="(prefers-color-scheme: dark)" />
+              <img src="documents-light.png" alt="documents" />
             </picture>
-            <figcaption>Resume</figcaption>
+            <figcaption>Documents</figcaption>
           </figure>
         </label>
 

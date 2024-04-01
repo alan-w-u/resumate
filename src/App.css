@@ -22,22 +22,34 @@ Order for CSS Documentation
 :root {
   font-family: Verdana, Arial, sans-serif;
 
-  color-scheme: light dark;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* Colour Scheme */
+  color-scheme: light dark;
+
   /* Custom Colours */
   --rich-black: #0D1B2A;
   --oxford-blue: #1B263B;
   --prussian-blue: #25334A;
+  --indigo-dye: #324565;
   --yinmn-blue: #415A77;
   --silver-late-blue: #778DA9;
   --platinum: #E0E1DD;
+  --cararra: #E9EAE7;
   --white-smoke: #F2F3F1;
   --seasalt: #FAF9F9;
+
+  --text: light-dark(var(--oxford-blue), var(--seasalt));
+  --background: light-dark(var(--seasalt), var(--prussian-blue));
+  --border: light-dark(var(--yinmn-blue), var(--silver-late-blue));
+  --hover: light-dark(var(--white-smoke), var(--yinmn-blue));
+  --active: light-dark(var(--white-smoke), var(--yinmn-blue));
+
+  color: var(--text);
+  background-color: var(--background);
 }
 
 #root {
@@ -83,6 +95,7 @@ nav {
   display: flex;
   padding: 0 0 0.2rem 0;
   border-style: solid none none none;
+  border-color: var(--border);
   justify-content: space-evenly;
 }
 
@@ -99,6 +112,16 @@ nav img {
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
+nav label:hover picture:hover img:hover {
+  border-color: var(--border);
+  background-color: var(--hover);
+}
+
+input[name=tab]:checked + label picture img {
+  border-color: var(--border);
+  background-color: var(--active);
+}
+
 input[name=tab] {
   position: fixed;
   opacity: 0;
@@ -108,48 +131,4 @@ input[name=tab] {
 input[name=tab] + label picture img {
   border-style: none solid solid solid;
   border-color: transparent;
-}
-
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--oxford-blue);
-    background-color: var(--seasalt);
-  }
-
-  nav {
-    border-color: var(--yinmn-blue);
-  }
-
-  nav label:hover picture:hover img:hover {
-    border-color: var(--yinmn-blue);
-    background-color: var(--platinum);
-  }
-
-  input[name=tab]:checked + label picture img {
-    border-color: var(--yinmn-blue);
-    background-color: var(--platinum);
-  }
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: var(--seasalt);
-    background-color: var(--prussian-blue);
-  }
-
-  nav {
-    border-color: var(--silver-late-blue);
-  }
-
-  nav label:hover picture:hover img:hover {
-    border-color: var(--silver-late-blue);
-    background-color: var(--yinmn-blue);
-  }
-
-  input[name=tab]:checked + label picture img {
-    border-color: var(--silver-late-blue);
-    background-color: var(--yinmn-blue);
-  }
 }
