@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Links from './assets/Links'
+import Documents from './assets/Documents'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       </header>
       <main>
         {tab === 'links' && <Links />}
+        {tab === 'documents' && <Documents/>}
       </main>
       <nav>
         <input type="radio" name="tab" id="links" onChange={() => setTab('links')} defaultChecked />
@@ -26,17 +28,6 @@ function App() {
           </figure>
         </label>
 
-        <input type="radio" name="tab" id="experience" onChange={() => setTab('experience')} />
-        <label htmlFor="experience">
-          <figure>
-            <picture>
-              <source srcSet="experience-dark.png" media="(prefers-color-scheme: dark)" />
-              <img src="experience-light.png" alt="experience" />
-            </picture>
-            <figcaption>Experience</figcaption>
-          </figure>
-        </label>
-
         <input type="radio" name="tab" id="documents" onChange={() => setTab('documents')} />
         <label htmlFor="documents">
           <figure>
@@ -45,6 +36,17 @@ function App() {
               <img src="documents-light.png" alt="documents" />
             </picture>
             <figcaption>Documents</figcaption>
+          </figure>
+        </label>
+
+        <input type="radio" name="tab" id="experience" onChange={() => setTab('experience')} />
+        <label htmlFor="experience">
+          <figure>
+            <picture>
+              <source srcSet="experience-dark.png" media="(prefers-color-scheme: dark)" />
+              <img src="experience-light.png" alt="experience" />
+            </picture>
+            <figcaption>Experience</figcaption>
           </figure>
         </label>
 

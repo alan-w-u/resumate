@@ -1,0 +1,22 @@
+.documents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.drag-drop {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  padding: 0.5rem;
+  border-style: dashed;
+  border-color: var(--asset-border);
+  border-radius: 0.5rem;
+  background-color: var(--asset-background);
+  align-items: center;
+  justify-content: center;
+}
