@@ -15,27 +15,26 @@
   cursor: pointer;
 }
 
-a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-b {
-  margin: 0 0.5rem 0 0;
-}
-
-p {
-  margin: 0;
-  font-size: 0.6rem;
-  font-weight: normal;
-  color: var(--text);
-  overflow: hidden;
-}
-
 .link:hover {
   background-color: var(--asset-hover);
 }
 
 .link:active {
   background-color: var(--asset-active);
+}
+
+.url-container {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.title {
+  margin: 0 0.5rem 0 0;
+}
+
+.url {
+  font-size: 0.6rem;
+  font-weight: normal;
+  color: var(--text);
+  overflow: hidden;
 }
