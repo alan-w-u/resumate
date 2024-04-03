@@ -6,10 +6,13 @@ function Link(props: { title: string; url: string }) {
   }
 
   return (
-    <div className='link' onClick={copy}>
-      <a href={props.url}>{props.title}</a>
-      <p>{props.url}</p>
-    </div>
+    <a href={props.url}>
+      <div className='link' onClick={copy}>
+        <b>{props.title}</b>
+        <p> </p> {/* Spacer for drag */}
+        <p>{props.url}</p>
+      </div>
+    </a>
   )
 }
 

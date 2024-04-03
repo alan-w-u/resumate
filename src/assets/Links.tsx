@@ -1,15 +1,15 @@
-// import { useState, useEffect } from 'react'
+// import { useState } from 'react'
 import Link from './Link'
 import './Links.css'
 
 function Links() {
   return (
     <div className='links'>
-      <h2>Click to Copy</h2>
+      <strong>Click to Copy / Drag to Paste</strong>
       <Link title={'LinkedIn'} url={'https://www.linkedin.com/in/alan-w-u/'} />
       <Link title={'GitHub'} url={'https://github.com/alan-w-u'} />
       <Link title={'Website'} url={'https://alan-w-u.github.io/'} />
-      {/* <button>+</button> */}
+      <button>+</button>
     </div>
   )
 }

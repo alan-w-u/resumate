@@ -26,7 +26,8 @@ button:active {
   background-color: light-dark(var(--platinum), var(--oxford-blue));
 }
 
-h2 {
-  margin: 0.25rem 0;
+strong {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
   text-align: center;
 }
