@@ -4,8 +4,7 @@ import './Links.css'
 
 function Links() {
   return (
-    <div className='links'>
-      <span className='prompt'>Click to Copy / Drag to Paste</span>
+    <div className='links asset-container'>
       <Link title={'LinkedIn'} url={'https://www.linkedin.com/in/alan-w-u/'} />
       <Link title={'GitHub'} url={'https://github.com/alan-w-u'} />
       <Link title={'Website'} url={'https://alan-w-u.github.io/'} />

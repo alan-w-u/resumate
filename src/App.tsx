@@ -5,6 +5,10 @@ import './App.css'
 
 function App() {
   const [tab, setTab] = useState('links');
+  const promptText: Record<string, string> = {
+    links: 'Click to Copy / Drag to Paste',
+    documents: 'Drag to Upload',
+  }
 
   return (
     <>
@@ -13,8 +17,9 @@ function App() {
         <h1>Resumate</h1>
       </header>
       <main>
+        <span className='prompt'>{promptText[tab]}</span>
         {tab === 'links' && <Links />}
-        {tab === 'documents' && <Documents/>}
+        {tab === 'documents' && <Documents />}
       </main>
       <nav>
         <input type="radio" name="tab" id="links" onChange={() => setTab('links')} defaultChecked />
