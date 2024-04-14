@@ -1,8 +1,11 @@
 import './Document.css'
 
-function Document() {
+function Document(props: { title: string }) {
   return (
-    <p>Document</p>
+    <div className='document asset'>
+      <span className='title'>{props.title}</span>
+      <iframe src="test.pdf" ></iframe>
+    </div>
   )
 }
 
