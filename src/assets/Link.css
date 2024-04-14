@@ -1,31 +1,10 @@
-.link {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  padding: 0.5rem;
-  margin: 0.25rem 0;
-  border-style: solid;
-  border-color: var(--asset-border);
-  border-radius: 0.5rem;
-  background-color: var(--asset-background);
-  font-size: 1rem;
-  font-weight: bold;
-  align-items: center;
-  cursor: pointer;
-}
-
-.link:hover {
-  background-color: var(--asset-hover);
-}
-
-.link:active {
-  background-color: var(--asset-active);
-}
-
-.url-container {
+.link-container {
   color: var(--text);
   text-decoration: none;
+}
+
+.link {
+  align-items: center;
 }
 
 .title {

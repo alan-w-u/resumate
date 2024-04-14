@@ -1,11 +1,3 @@
-.links {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
 button {
   width: 100%;
   height: fit-content;
@@ -24,11 +16,4 @@ button:hover {
 
 button:active {
   background-color: light-dark(var(--platinum), var(--oxford-blue));
-}
-
-.prompt {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-align: center;
 }

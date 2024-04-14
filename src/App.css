@@ -10,15 +10,6 @@ Order for CSS Elements:
 8. Else
 */
 
-/* 
-Order for CSS Documentation
-1. Main HTML/Semantic (Section) Elements
-2. General HTML Objects
-3. Classes
-4. ID
-5. Selectors
-*/
-
 :root {
   font-family: Verdana, Arial, sans-serif;
 
@@ -42,12 +33,14 @@ Order for CSS Documentation
   --white-smoke: #F2F3F1;
   --seasalt: #FAF9F9;
 
+  /* Light/Dark Mode Colours */
   --text: light-dark(var(--oxford-blue), var(--seasalt));
   --background: light-dark(var(--seasalt), var(--prussian-blue));
   --border: light-dark(var(--yinmn-blue), var(--silver-late-blue));
   --hover: light-dark(var(--white-smoke), var(--yinmn-blue));
   --active: light-dark(var(--white-smoke), var(--yinmn-blue));
 
+  /* Global Asset Colours */
   --asset-border: light-dark(var(--platinum), var(--oxford-blue));
   --asset-background: light-dark(var(--white-smoke), var(--yinmn-blue));
   --asset-hover: light-dark(var(--cararra), var(--indigo-dye));
@@ -90,6 +83,7 @@ header h1 {
 
 main {
   display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 100%;
   height: 70%;
@@ -128,12 +122,49 @@ input[name=tab]:checked + label picture img {
 }
 
 input[name=tab] {
-  position: fixed;
-  opacity: 0;
-  border-radius: 0.5rem;
+  display: none;
 }
 
 input[name=tab] + label picture img {
   border-style: none solid solid solid;
   border-color: transparent;
+}
+
+.prompt {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.asset-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.asset {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border-style: solid;
+  border-color: var(--asset-border);
+  border-radius: 0.5rem;
+  background-color: var(--asset-background);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.asset:hover {
+  background-color: var(--asset-hover);
+}
+
+.asset:active {
+  background-color: var(--asset-active);
 }
