@@ -25,11 +25,12 @@ Order for CSS Elements:
   --rich-black: #0D1B2A;
   --oxford-blue: #1B263B;
   --prussian-blue: #25334A;
-  --indigo-dye: #324565;
+  --bluewood: #2E4055;
+  --fiord: #3A516B;
   --yinmn-blue: #415A77;
   --silver-late-blue: #778DA9;
   --platinum: #E0E1DD;
-  --cararra: #E9EAE7;
+  --desert-storm: #EDEEEB;
   --white-smoke: #F2F3F1;
   --seasalt: #FAF9F9;
 
@@ -41,10 +42,10 @@ Order for CSS Elements:
   --active: light-dark(var(--white-smoke), var(--yinmn-blue));
 
   /* Global Asset Colours */
-  --asset-border: light-dark(var(--platinum), var(--oxford-blue));
+  --asset-border: light-dark(var(--platinum), var(--bluewood));
   --asset-background: light-dark(var(--white-smoke), var(--yinmn-blue));
-  --asset-hover: light-dark(var(--cararra), var(--indigo-dye));
-  --asset-active: light-dark(var(--platinum), var(--oxford-blue));
+  --asset-hover: light-dark(var(--desert-storm), var(--fiord));
+  --asset-active: light-dark(var(--platinum), var(--bluewood));
 
   color: var(--text);
   background-color: var(--background);
@@ -182,18 +183,18 @@ input[name=tab] + label picture img {
 .asset-add-button {
   width: 100%;
   height: fit-content;
-  border-color: light-dark(var(--oxford-blue), var(--platinum));
+  border-color: var(--asset-border);
   border-radius: 0.5rem;
-  background-color: light-dark(var(--white-smoke), var(--yinmn-blue));
+  background-color: var(--asset-background);
   font-size: 1.1rem;
   font-weight: bold;
   margin: auto 0 0.5rem 0;
 }
 
 .asset-add-button:hover {
-  background-color: light-dark(var(--cararra), var(--indigo-dye));
+  background-color: var(--asset-hover);
 }
 
 .asset-add-button:active {
-  background-color: light-dark(var(--platinum), var(--oxford-blue));
+  background-color: var(--asset-active);
 }
