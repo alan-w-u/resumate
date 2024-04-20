@@ -1,6 +1,20 @@
 iframe {
-  width: 48.75%;
-  height: auto;
+  width: 5rem;
+  height: 6.45rem;
   margin: 0 0 0 auto;
   border: 0;
+}
+
+.document-info {
+  display: inline;
+}
+
+.document-title {
+  font-size: 1.1rem;
+}
+
+.document-file {
+  font-size: 0.75rem;
+  font-weight: normal;
+  overflow: hidden;
 }
