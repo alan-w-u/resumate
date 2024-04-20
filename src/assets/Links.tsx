@@ -4,12 +4,15 @@ import './Links.css'
 
 function Links() {
   return (
-    <div className='links asset-container'>
-      <Link title={'LinkedIn'} url={'https://www.linkedin.com/in/alan-w-u/'} />
-      <Link title={'GitHub'} url={'https://github.com/alan-w-u'} />
-      <Link title={'Website'} url={'https://alan-w-u.github.io/'} />
-      <button>+</button>
-    </div>
+    <>
+      <div className='assets links'>
+        <Link title={'LinkedIn'} url={'https://www.linkedin.com/in/alan-w-u/'} />
+        <Link title={'GitHub'} url={'https://github.com/alan-w-u'} />
+        <Link title={'Website'} url={'https://alan-w-u.github.io/'} />
+      </div>
+      <br />
+      <button className='asset-add-button'>+</button>
+    </>
   )
 }
 
