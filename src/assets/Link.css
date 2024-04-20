@@ -1,19 +1,36 @@
-.link-container {
-  color: var(--text);
-  text-decoration: none;
-}
-
 .link {
   align-items: center;
 }
 
-.title {
-  margin: 0 0.5rem 0 0;
+.link-title {
+  margin: 0 0.25rem 0 0;
+  font-size: 0.9rem;
 }
 
-.url {
+.link-url {
+  width: 11rem;
+  height: auto;
   font-size: 0.6rem;
   font-weight: normal;
-  color: var(--text);
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link a {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 0 0 auto;
+  border-style: solid;
+  border-color: var(--asset-border);
+  border-radius: 0.25rem;
+}
+
+.link a:hover {
+  border-color: var(--text);
+}
+
+.link picture img {
+  width: 100%;
+  height: 100%;
 }

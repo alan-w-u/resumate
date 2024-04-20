@@ -6,12 +6,15 @@ function Link(props: { title: string; url: string }) {
   }
 
   return (
-    <a href={props.url} className='link-container'>
-      <div className='link asset' onClick={copy}>
-        <span className='title'>{props.title}</span>
-        <span> </span> {/* Spacer for prompt/hint that appears when dragging a link */}
-        <span className='url'>{props.url}</span>
-      </div>
+    <a href={props.url} className='asset link' onClick={copy} draggable>
+      <span className='link-title'>{props.title}</span>
+      <span className='link-url'>{props.url}</span>
+      <a href={props.url} target='_blank'>
+        <picture>
+          <source srcSet="redirect-dark.png" media="(prefers-color-scheme: dark)" />
+          <img src="redirect-light.png" alt="profile" draggable="false" />
+        </picture>
+      </a>
     </a>
   )
 }
