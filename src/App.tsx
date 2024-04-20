@@ -5,15 +5,23 @@ import './App.css'
 
 function App() {
   const [tab, setTab] = useState('links');
-  const promptText: Record<string, string> = {
-    links: 'Click to Copy / Drag to Paste',
-    documents: 'Drag to Upload',
+  const promptText: Record<string, JSX.Element> = {
+    links:
+      <>
+        Click to Copy / Drag to Paste / {' '}
+        <picture>
+          <source srcSet="redirect-dark.png" media="(prefers-color-scheme: dark)" />
+          <img src="redirect-light.png" alt="profile" draggable="false" />
+        </picture>
+        {' '} to Open
+      </>,
+    documents: <>Drag to Upload</>,
   }
 
   return (
     <>
       <header>
-        <img src="resumate-128.png" alt="resumate" />
+        <img src="resumate-128.png" alt="resumate" draggable="false" />
         <h1>Resumate</h1>
       </header>
       <main>
@@ -27,7 +35,7 @@ function App() {
           <figure>
             <picture>
               <source srcSet="links-dark.png" media="(prefers-color-scheme: dark)" />
-              <img src="links-light.png" alt="links" />
+              <img src="links-light.png" alt="links" draggable="false" />
             </picture>
             <figcaption>Links</figcaption>
           </figure>
@@ -38,7 +46,7 @@ function App() {
           <figure>
             <picture>
               <source srcSet="documents-dark.png" media="(prefers-color-scheme: dark)" />
-              <img src="documents-light.png" alt="documents" />
+              <img src="documents-light.png" alt="documents" draggable="false" />
             </picture>
             <figcaption>Documents</figcaption>
           </figure>
@@ -49,7 +57,7 @@ function App() {
           <figure>
             <picture>
               <source srcSet="experience-dark.png" media="(prefers-color-scheme: dark)" />
-              <img src="experience-light.png" alt="experience" />
+              <img src="experience-light.png" alt="experience" draggable="false" />
             </picture>
             <figcaption>Experience</figcaption>
           </figure>
@@ -60,7 +68,7 @@ function App() {
           <figure>
             <picture>
               <source srcSet="profile-dark.png" media="(prefers-color-scheme: dark)" />
-              <img src="profile-light.png" alt="profile" />
+              <img src="profile-light.png" alt="profile" draggable="false" />
             </picture>
             <figcaption>Profile</figcaption>
           </figure>
