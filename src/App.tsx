@@ -11,11 +11,19 @@ function App() {
         Click to Copy / Drag to Paste / {' '}
         <picture>
           <source srcSet="redirect-dark.png" media="(prefers-color-scheme: dark)" />
-          <img src="redirect-light.png" alt="profile" draggable="false" />
+          <img src="redirect-light.png" alt="redirect" draggable="false" />
         </picture>
         {' '} to Open
       </>,
-    documents: <>Drag to Upload</>,
+    documents:
+      <>
+        Drag to Upload / {' '}
+        <picture>
+          <source srcSet="download-dark.png" media="(prefers-color-scheme: dark)" />
+          <img src="download-light.png" alt="download" draggable="false" />
+        </picture>
+        {' '} to Download
+      </>,
   }
 
   return (
