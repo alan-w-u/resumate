@@ -22,7 +22,12 @@ function App() {
           <source srcSet="download-dark.png" media="(prefers-color-scheme: dark)" />
           <img src="download-light.png" alt="download" draggable="false" />
         </picture>
-        {' '} to Download
+        {' '} to Download / {' '}
+        <picture>
+          <source srcSet="redirect-dark.png" media="(prefers-color-scheme: dark)" />
+          <img src="redirect-light.png" alt="redirect" draggable="false" />
+        </picture>
+        {' '} to Open
       </>,
   }
 
