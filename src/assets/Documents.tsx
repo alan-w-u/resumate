@@ -31,7 +31,7 @@ function Documents() {
     <>
       <div className='assets documents'>
         <Document title={'Resume'} file={"test.pdf"} />
-        <div className='drag-drop' onDragOver={dragOverHandler} onDragLeave={setDragPrompt} onDragEnd={setDragPrompt} onDrop={dropHandler}>
+        <div className='drop-zone' onDragOver={dragOverHandler} onDragLeave={setDragPrompt} onDragEnd={setDragPrompt} onDrop={dropHandler}>
           <p>{prompt}</p>
           <input type="file" />
         </div>

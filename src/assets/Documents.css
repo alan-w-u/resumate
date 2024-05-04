@@ -1,4 +1,4 @@
-.drag-drop {
+.drop-zone {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
