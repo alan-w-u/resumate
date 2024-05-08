@@ -22,17 +22,17 @@ Order for CSS Elements:
   color-scheme: light dark;
 
   /* Custom Colours */
-  --rich-black: #0D1B2A;
-  --oxford-blue: #1B263B;
-  --prussian-blue: #25334A;
-  --bluewood: #2E4055;
-  --fiord: #3A516B;
-  --yinmn-blue: #415A77;
-  --silver-late-blue: #778DA9;
-  --platinum: #E0E1DD;
-  --desert-storm: #EDEEEB;
-  --white-smoke: #F2F3F1;
-  --seasalt: #FAF9F9;
+  --rich-black: #0d1b2a;
+  --oxford-blue: #1b263b;
+  --prussian-blue: #25334a;
+  --bluewood: #2e4055;
+  --fiord: #3a516b;
+  --yinmn-blue: #415a77;
+  --silver-late-blue: #778da9;
+  --platinum: #e0e1dd;
+  --desert-storm: #edeeeb;
+  --white-smoke: #f2f3f1;
+  --seasalt: #faf9f9;
 
   /* Light/Dark Mode Colours */
   --text: light-dark(var(--oxford-blue), var(--seasalt));
