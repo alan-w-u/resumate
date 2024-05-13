@@ -1,13 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "Resumate",
-    "version": "1.0.0",
-    "description": "Streamline job applications with quick access to relevant links and documents.",
-    "icons": {
-      "48": "resumate-48.png",
-      "128": "resumate-128.png"
-    },
-    "action": {
-        "default_popup": "index.html"
-    }
+  "manifest_version": 3,
+  "name": "Resumate",
+  "version": "1.0.0",
+  "description": "Streamline job applications with quick access to relevant links and documents.",
+  "icons": {
+    "48": "resumate-48.png",
+    "128": "resumate-128.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
 }
