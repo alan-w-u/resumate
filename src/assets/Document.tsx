@@ -48,18 +48,18 @@ function Document(props: { title: string; file: string }) {
   };
 
   return (
-    <div className='asset document' onDragStart={upload} draggable>
-      <div className='document-info'>
-        <span className='document-title'>{props.title}</span>
-        <span className='document-file'>{props.file}</span>
-        <div className='document-buttons'>
+    <div className="asset document" onDragStart={upload} draggable>
+      <div className="document-info">
+        <span className="document-title">{props.title}</span>
+        <span className="document-file">{props.file}</span>
+        <div className="document-buttons">
           <a href={props.file} download>
             <picture>
               <source srcSet="download-dark.png" media="(prefers-color-scheme: dark)" />
               <img src="download-light.png" alt="download" />
             </picture>
           </a>
-          <a href={props.file} target='_blank'>
+          <a href={props.file} target="_blank">
             <picture>
               <source srcSet="redirect-dark.png" media="(prefers-color-scheme: dark)" />
               <img src="redirect-light.png" alt="redirect" />

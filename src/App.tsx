@@ -38,7 +38,7 @@ function App() {
         <h1>Resumate</h1>
       </header>
       <main>
-        <span className='prompt'>{promptText[tab]}</span>
+        <span className="prompt">{promptText[tab]}</span>
         {tab === 'links' && <Links />}
         {tab === 'documents' && <Documents />}
       </main>

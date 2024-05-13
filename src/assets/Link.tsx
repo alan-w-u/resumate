@@ -12,12 +12,12 @@ function Link(props: { title: string; url: string }) {
   };
 
   return (
-    <div className='asset link' onClick={copy} onDragStart={paste} draggable>
-      <span className='link-title'>{props.title}</span>
-      <span className='link-url'>{props.url}</span>
+    <div className="asset link" onClick={copy} onDragStart={paste} draggable>
+      <span className="link-title">{props.title}</span>
+      <span className="link-url">{props.url}</span>
       {
         !/@/.test(props.url) && // No redirect button if URL is an email address
-        <a href={props.url} target='_blank'>
+        <a href={props.url} target="_blank">
           <picture>
             <source srcSet="redirect-dark.png" media="(prefers-color-scheme: dark)" />
             <img src="redirect-light.png" alt="redirect" />
