@@ -13,7 +13,7 @@ function Links() {
       <br />
       <button className='asset-add-button'>+</button>
     </>
-  )
+  );
 }
 
 export default Links

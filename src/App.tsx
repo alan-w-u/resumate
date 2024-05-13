@@ -29,7 +29,7 @@ function App() {
         </picture>
         {' '} to Open
       </>,
-  }
+  };
 
   return (
     <>
@@ -88,7 +88,7 @@ function App() {
         </label>
       </nav>
     </>
-  )
+  );
 }
 
 export default App

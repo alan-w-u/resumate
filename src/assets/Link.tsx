@@ -3,13 +3,13 @@ import './Link.css'
 function Link(props: { title: string; url: string }) {
   const copy = () => {
     navigator.clipboard.writeText(props.url);
-  }
+  };
 
   const paste = (e: React.DragEvent<HTMLElement>) => {
     // Set MIME types to paste only the URL
     e.dataTransfer.setData('text/uri-list', props.url);
     e.dataTransfer.setData('text/html', props.url);
-  }
+  };
 
   return (
     <div className='asset link' onClick={copy} onDragStart={paste} draggable>
@@ -25,7 +25,7 @@ function Link(props: { title: string; url: string }) {
         </a>
       }
     </div>
-  )
+  );
 }
 
 export default Link
