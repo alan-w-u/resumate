@@ -6,10 +6,12 @@ iframe {
 }
 
 .document-info {
-  display: inline;
+  display: flex;
+  flex-direction: column;
 }
 
 .document-title {
+  margin: 0 0 0.25rem 0;
   font-size: 1.1rem;
 }
 
@@ -17,4 +19,27 @@ iframe {
   font-size: 0.75rem;
   font-weight: normal;
   overflow: hidden;
+}
+
+.document-buttons {
+  display: flex;
+  margin: auto auto 0 0;
+}
+
+.document-buttons a {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.5rem 0 0;
+  border-style: solid;
+  border-color: var(--asset-border);
+  border-radius: 0.25rem;
+}
+
+.document-buttons a:hover {
+  border-color: var(--text);
+}
+
+.document-buttons picture img {
+  width: 100%;
+  height: 100%;
 }
